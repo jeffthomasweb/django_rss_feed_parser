@@ -1,62 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-<title>News App</title>
+  <head>
+    <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>News App</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-</head>
-<section class="has-background-black">
+  </head>
+  <section class="has-background-black">
 <br>
 <div class="container is-fluid has-text-white">
-<body>
+
+  <body>
 <H1 class="title is-1 has-text-link-dark">NPR News</H1>
 <div class="is-size-4">   
-<p class"> {{ b }} </p><br>
-<p> {{ c }} </p><br>
-<p> {{ d }} </p><br>
-<p> {{ e }} </p><br>
-<p> {{ ef }} </p><br>
-<p> {{ g }} </p><br>
-<p> {{ h }} </p><br>
-<p> {{ i }} </p><br>
-<p> {{ j }} </p><br>
-<p> {{ k }} </p><br>
-<p> {{ l }} </p><br>
-<p> {{ m }} </p><br>
-<p> {{ n }} </p><br>
-<p> {{ o }} </p><br>
-<p> {{ p }} </p><br>
+ {% for story in npr_list  %}
+    <p> {{story}} </p>
+    <br>
+{% endfor %}
 <br>
 <H1 class="title is-1 has-text-link-dark">Ars Technica </H1><br>
-<p> {{ r }} </p><br>
-<p> {{ s }} </p> <br>
-<p> {{ t }} </p> <br>
-<p> {{ u }} </p><br>
-<p> {{ v }} </p> <br>
-<p> {{ w }} </p> <br>
-<p> {{ x }} </p> <br>
-<p> {{ y }} </p><br>
-<p> {{ z }} </p><br>
-<p> {{ ab }} </p><br>
-<p> {{ ac }} </p><br>
-<p> {{ ad }} </p><br>
-<p> {{ ae }} </p><br>
-<p> {{ af }} </p><br>
-<p> {{ ag }} </p><br>
+{% for story in ars_list  %}
+    <p> {{story}} </p>
+    <br>
+{% endfor %}
 <br>
 <H1 class="title is-1 has-text-link-dark">Buffalo News WGRZ</H1><br>
-<p> {{ ai }} </p><br>
-<p> {{ aj }} </p><br>
-<p> {{ ak }} </p><br>
-<p> {{ al }} </p><br>
-<p> {{ am }} </p><br>
-<p> {{ an }} </p><br>
-<p> {{ ao }} </p><br>
-<p> {{ ap }} </p><br>
-<p> {{ aq }} </p><br>
-<p> {{ ar }} </p><br>
-
+{% for story in buffalo_list  %}
+    <p> {{story}} </p>
+    <br>
+{% endfor %}
 </body>
 </div>
 </div>
