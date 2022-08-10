@@ -6,7 +6,7 @@ import re
 #Use function rss(rss_address) to get RSS feed data. Function parameter rss_address is the RSS Feed address. 
 def rss(rss_address):
     #Use feedparser library to get RSS feed data. Data will originally be in a XML format. 
-    feedparser_parse = feedparser.parse(f"{rss_address}")
+    feedparser_parse = feedparser.parse(rss_address)
     #Create anempty list story_list to add RSS feed story titles and story summaries.
     story_list = []
     #The feedparser library is good at parsing the original XML format RSS feed data but is unable to take out some HTML tags like <em> and </em>
